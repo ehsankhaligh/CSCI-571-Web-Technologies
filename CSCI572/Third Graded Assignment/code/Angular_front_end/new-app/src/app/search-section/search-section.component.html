@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+   <head>
+      <title>Search Page</title>
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1">
+      <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+      <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+   </head>
+   <body>
+      <div id="page-container">
+         <div id="content-wrap">
+            <div id="backgroundimage"></div>
+            <div class="col-sm text-center" id="search-text">
+               <br><br><br>
+               <h1>STOCK SEARCH</h1>
+            </div>
+            <form class="row justify-content-center" [formGroup]="companySearchMatchForm">
+               <div class="input-group align-baseline rounded-pill pl-3" id="searchFrame">
+                  <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/css/bootstrap.min.css" rel="stylesheet"/>
+                  <input type="text"
+                     id = "inputBox"
+                     class="form-control border-0 m-0 p-0"
+                     placeholder="Enter Stock symbol"
+                     formControlName="userSearchInput"
+                     aria-label="Number"
+                     [matAutocomplete]="auto"/>
+                  <mat-autocomplete  #auto="matAutocomplete" [displayWith]="dropdown">
+                  <ng-container *ngIf="!isLoading" class="is-loading">
+                     <mat-option *ngFor="let option of filteredOptions" [value]="option">
+                     <big><b>{{option.symbol}}</b></big> <small> | {{option.description}}</small>
+                     </mat-option>
+                  </ng-container>
+                  </mat-autocomplete>
+                  <span class="input-group-append">
+                     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" integrity="sha512-9usAa10IRO0HhonpyAIVpjrylPvoDwiPUiKdWk5t3PyolY1cOd4DSE0Ga+ri4AuTroPR5aQvXU9xC6qOPnzFeg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+                     <button class="input-group-text border-0 m-0 p-0 bg-transparent" (click)="Search(companySearchMatchForm.value)"><i class='fa-solid fa-magnifying-glass blue-color'></i></button>
+                  </span>
+                  <span class="input-group-append">
+                     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.7.2/font/bootstrap-icons.css">
+                     <button class="input-group-text border-0 m-0 p-2 bg-transparent" (click)="clearSearch(companySearchMatchForm.value)"><i class="bi bi-x blue-color"></i></button>
+                  </span>
+               </div>
+            </form>
+            <div *ngIf="emptySearchInput == true" class="container mt-5">
+               <div class="alert alert-danger text-center text-dark" role="alert">
+                  Please enter valid Ticker
+               </div>
+            </div>
+            <div *ngIf="validTickerFlag == true" class="container mt-5">
+               <div class="alert alert-danger text-center text-dark" role="alert">
+                  No Data Found. Please enter valid Ticker
+               </div>
+            </div>
+         </div>
+         <footer id="footer" style="background-color:rgb(115, 147, 179);">Powered by <a href=" https://finnhub.io" target="_blank">Finnhub.io</a></footer>
+      </div>
+   </body>
+</html>

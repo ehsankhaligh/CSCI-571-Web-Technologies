@@ -1,0 +1,17 @@
+<!--p>tradeboxsell works!</p-->
+<div class="modal-header">
+   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.7.2/font/bootstrap-icons.css">
+   <h5 class="modal-title">{{DataSellObj['ticker']}}</h5>
+   <button type="button" id="mybtn" class="btn btn-link"><span class="bi bi-x" (click)="sellModalService.dismiss('Cross click')"></span></button>
+</div>
+<div class="modal-body">
+   <p>Current Price {{DataSellObj['currentPrice']}}</p>
+   <p>Money in wallet: $ {{balanceSell}}</p>
+   Quantity &nbsp;<input type="number" id="quantity" style="width: 7em" (keyup)="inputbox(quantity.value)" min="1" #quantity>
+   <ng-template [ngIf]="warnbalanceFlagSell == true"><p style="color:red"><br>You cannot sell the stocks you don't have!</p></ng-template>
+
+</div>
+<div class="modal-footer">
+  <span  class="mr-auto" >Total: {{DataSellObj['total']}}</span>
+  <button type="button" class="btn btn-secondary" data-dismiss="modal" (click)="sellbtn()" [disabled]="warnbalanceFlagSell == true" style="backgroundColor:green;">Sell</button>
+</div>

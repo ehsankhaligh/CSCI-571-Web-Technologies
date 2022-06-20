@@ -1,0 +1,11 @@
+nav {
+    background: rgb(7, 0, 169);
+}
+
+.active {
+    color: white;
+}
+
+.nav-item {
+    text-align: right;
+}

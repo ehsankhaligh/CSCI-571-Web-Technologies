@@ -1,0 +1,8 @@
+.page-footer {
+  min-height: 50px;
+  width: 100%;
+  background: rgb(210, 210, 210);
+  text-align: center;
+  height: 65px;
+  line-height: 30px;
+}

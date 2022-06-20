@@ -1,0 +1,272 @@
+* {
+  box-sizing: border-box;
+}
+
+.topOptions {
+  margin-left: 0px;
+  padding-top: 30px;
+  padding-bottom: 30px;
+  padding-right: 50px;
+  padding-left: 80px;
+  position: fixed;
+  width: 1239px;
+  top: 0;
+  z-index: 10;
+  background-color: White;
+}
+
+.topOptions a{
+  float: right;
+	padding-right: 35px;
+	color: black;
+  font-family: "Arial";
+  font-size: 12px;
+  text-decoration: none;
+}
+
+.backgroungImg{
+    background: url(image3.png) top left;
+    width: 1239px;
+    height: 1000px;
+    display: flex;
+    -webkit-box-align: center;
+    -webkit-align-items: center;
+    align-items: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-position-y: -280px;
+}
+
+.backgroungImg p{
+  color: White;
+  margin-left:auto;
+  margin-right:auto;
+  font-family: 'Alegreya';
+  font-size: 52px;
+  width: auto;
+}
+
+
+.Services {
+  width: 1189px;
+  padding-top: 60px;
+  padding-left: 80px;
+  position: relative;
+}
+
+#flower {
+  height: 500px;
+  width: 400px;
+  max-width: 400px;
+  max-height: 500px;
+  margin-right: 60px;
+}
+
+#img1 {
+  height: 630px;
+  width: 630px;
+  max-width: 630px;
+  max-height: 500px;
+  margin-right: 8px;
+}
+
+.flowerTop {
+  position: absolute;
+  top: 180px;
+  left: 200px;
+  font-family: "Arial";
+  font-weight:normal;
+  font-size: 25px;
+  color: White;
+}
+
+.flowerCenter {
+  position: absolute;
+  top: 320px;
+  left: 200px;
+  font-family: "Lucida Console";
+  font-size: 14px;
+  text-align: left;
+  color: White;
+
+}
+
+.flowerBottom  {
+  position: absolute;
+  top: 380px;
+  left: 190px;
+  font-family: "Helvetica";
+  font-size: 14px;
+  display:inline-block;
+  padding: 20px 65px 20px 65px;
+  background-color: #BD9F55;
+  border-style: solid;
+  border-color: White;
+  border-width: thin;
+}
+
+.quote blockquote{
+  padding-top: 50px;
+  color: black;
+  text-align: center;
+  font-family: 'Bitter', serif;
+  font-size: 1.45em;
+  letter-spacing: 3px;
+  margin-left:auto;
+  margin-right:auto;
+}
+
+#sign{
+  padding-top: 50px;
+  color: black;
+  text-align: center;
+  font-family: 'Bitter', serif;
+  font-size: 2em;
+  margin-left:auto;
+  margin-right:auto;
+}
+
+.quote p{
+  color: #B2936C;
+  text-align: center;
+  font-family: 'Arial';
+  font-size: 13px;
+  margin-left:auto;
+  :auto;
+}
+
+.gallery {
+  width: 1189px;
+  padding-top: 10px;
+  padding-left: 80px;
+  position: relative;
+}
+
+.ggalleryImg {
+  margin-top: 30px;
+  background-image: url(image2.png);
+  height: 550px;
+  width: 1000px;
+  float: center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-position-y: -250px;
+}
+
+.galleryImg {
+  width: 1075px;
+  height: 650px;
+  background: url(image2.png) no-repeat;
+  background-size: 1170px, 50%, 100%, 100%;
+  background-attachment: fixed;
+  background-position-y: -250px;
+}
+
+.bottomInfo {
+  padding-top: 30px;
+  padding-right: 50px;
+  padding-left: 80px;
+
+  top: 80px;
+  left: 80px;
+  right: 50px;
+
+  width: 1080px;
+  height: 150px;
+
+  float: center;
+  position: relative;
+  background-color: #BD9F55;
+}
+
+.textinfo p{
+   font-family:"Helvetica";
+   font-size: 13px;
+   text-align: left;
+   color: white;
+   float: left;
+   width: 150px;
+   top: 50px;
+   margin:20px;
+   border-right: 0.5px solid white;
+}
+
+.textinfo p:last-child {
+   border-right:0;
+   border-left:0;
+}
+
+.BookCons a{
+  font-family: "Arial";
+  font-size: 12px;
+  text-decoration: none;
+  margin-top: 30px;
+  margin-left: 50px;
+  display:inline-block;
+  padding: 15px 15px 15px 15px;
+  background-color: #BD9F55;
+  color: white;
+  border-style: solid;
+  border-color: White;
+  border-width: thin;
+}
+
+.galleryBox {
+  height: 85%;
+  width: 34%;
+  background-image: url('flower.png');
+  margin: 20px 10px 90px 640px;
+  display: inline-block;
+}
+
+.galleryBox h1{
+    font-family: "Helvetica";
+    font-size: 25px;
+    font-weight:normal;
+    color: White;
+    padding-top: 135px;
+    padding-left: 110px;
+}
+
+#galleryBoxParagraph1 {
+    font-size: 13px;
+    font-family: "Lucida Console";
+    text-align: left;
+    color: White;
+    padding-top: 90px;
+    padding-left: 110px;
+}
+
+#galleryBoxParagraph2 {
+    font-size: 15px;
+    font-family: "Lucida Console";
+    text-align: left;
+    color: White;
+    padding-top: 5px;
+    padding-left: 135px;
+}
+
+.galleryBox a{
+  font-family: "Helvetica";
+  font-size: 12px;
+  text-decoration: none;
+  display:inline-block;
+  position: absolute;
+  top: 420px;
+  left: 810px;
+  padding: 20px 65px 20px 65px;
+  background-color: #BD9F55;
+  color: white;
+  border-style: solid;
+  border-color: White;
+  border-width: thin;
+}
+
+.mypage2Section1 p{
+    font-family: "Georgia, serif";
+	font-size: 20px;
+  font-weight: bold;
+	font-weight: auto;
+	line-height: auto;
+	color: rgb(60, 40, 40);
+}

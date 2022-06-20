@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+<head>
+<link rel="stylesheet" href="/static/index.css">
+<script type="text/javascript" src="/static/javascript.js"></script>
+<script src="https://code.highcharts.com/stock/highstock.js"></script>
+<script src="https://code.highcharts.com/stock/modules/data.js"></script>
+<script src="https://code.highcharts.com/stock/modules/exporting.js"></script>
+<script src="https://code.highcharts.com/stock/modules/export-data.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.18.1/moment.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/moment-timezone/0.5.13/moment-timezone-with-data-2012-2022.min.js"></script>
+</head>
+<body onload="myFunction()" style="font-family: Arial, Helvetica, sans-serif;">
+    <div class='topSearch' style="background-image: url('/static/img/back.svg'); background-repeat: no-repeat">
+
+      <br><br><br><br>
+
+      <h1 id="stockSearch">Stock Search</h1>
+
+        <form class='searchTools'>
+          <input id="searchimg" onclick="returnResult();" type="image" src="/static/img/search-solid.svg" class="button">
+          <input id="searchBox" type="text" placeholder="Enter Stock Ticker Synmbol" name="uname" autocomplete="on" required>
+          <input id="clearimg" onclick="clearPage();" type="image" value="reset" src="/static/img/times-solid.svg"  class="button">
+       </form>
+
+      <br><br><br><br><br>
+
+    </div>
+    <div>
+      <div id="symbolNotFound">
+          <p>Error: No record has been found, please enter a valid symbol</p>
+      </div>
+
+      <div id="topnav">
+          <div class="topnav">
+            <a id="company" onclick="showCompanyTabHtml();" class="btn active" href="#1">Company</a>
+            <a id='stocksum' onclick="showStockSumTabHtml();" class="btn" href="#2">Stock Summary</a>
+            <a id='charts' onclick="showChartsTabHtml();" class="btn" href="#3">Charts</a>
+            <a id='latestnews' onclick="showLatestNewsTabHtml();" class="btn" href="#4">Latest News</a>
+         </div>
+      </div>
+
+      <div id="tab" style="display:flex;flex-direction: column;">
+        <div id="companytabinfo"></div>
+        <div id="stocksumtabinfo"></div>
+        <div id="stocksumRecinfo"></div>
+        <div id="chartstabinfo" class="myChartstabinfo" style="margin-left:6%;margin-right:6%"></div>
+        <div id="latestnewstabinfo"></div>
+      </div>
+  </div>
+</body>
+</html>

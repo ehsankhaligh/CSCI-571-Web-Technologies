@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+   <head>
+      <title>Bootstrap Example</title>
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1">
+      <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+      <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+   </head>
+   <body>
+      <div id="page-container" id="itemfontsize">
+         <div id="content-wrap">
+            <div id="backgroundimage"></div>
+            <div class="card" id="marginStyle">
+               <div class="card-header">
+                  <span style="font-size: 20px;"><Strong>My Portfolio</Strong><br>
+                  Money in wallet: $ {{balance}}</span>
+               </div>
+            </div>
+            <ng-template [ngIf]="warnFlag == true" id="marginStyle">
+               <div class="alert alert-warning" id="marginStyle" role="alert" >
+                  Currently you don't have any stock.
+               </div>
+            </ng-template>
+            <ng-template [ngIf]="holdingsListDisplayFlag == true" id="marginStyle">
+               <div class="card text-center" id="marginStyle" *ngFor="let item of this.holdingsListDisplay">
+                  <div class="card-header">
+                     <span style="color:black;font-size:20px;float:left"> {{item.symbol}} &nbsp;</span>
+                     <span style="color:gray;font-size:10px;float:left"> {{item.name}} </span>
+                  </div>
+                  <div class="card-body">
+                     <div class="row">
+                        <div class="col col-example">
+                           <p class="card-text"><span style="float:left">Quantity:</span><span style="float:right">{{item.quantity}}</span></p>
+                        </div>
+                        <div class="col col-example">
+                           <p class="card-text"><span style="float:left">Change:</span><span style="float:right;color:{{item.rightpriceColor}}">{{item.change}}</span></p>
+                        </div>
+                        <div class="w-100"></div>
+                        <div class="col col-example">
+                           <p class="card-text"><span style="float:left">Avg. Cost/Share:</span><span style="float:right">{{item.avgCost}}</span></p>
+                        </div>
+                        <div class="col col-example">
+                           <p class="card-text"><span style="float:left">Current Price:</span><span style="float:right;color:{{item.rightpriceColor}}">{{item.currentprice}}</span></p>
+                        </div>
+                        <div class="w-100"></div>
+                        <div class="col col-example">
+                           <p class="card-text"><span style="float:left">Total Cost:</span><span style="float:right">{{item.totalcost}}</span></p>
+                        </div>
+                        <div class="col col-example">
+                           <p class="card-text"><span style="float:left">Market Value:</span><span style="float:right;color:{{item.marketValueColor}}">{{item.marketValue}}</span></p>
+                        </div>
+                     </div>
+                  </div>
+                  <div class="card-footer text-muted">
+                     <button type="button" class="btn btn-secondary" data-dismiss="modal" (click)="popSellShareBox(item.symbol)" style="backgroundColor:red;float:right">Sell</button>
+                     <span>&nbsp;</span>
+                     <button type="button" class="btn btn-primary" data-dismiss="modal" (click)="popBuyShareBox(item.symbol)" style="backgroundColor:green;float:right">Buy</button>
+                  </div>
+                  <br>
+               </div>
+            </ng-template>
+         </div>
+         <footer id="footer" style="background-color:rgb(115, 147, 179);">Powered by <a href=" https://finnhub.io" target="_blank">Finnhub.io</a></footer>
+      </div>
+   </body>
+</html>

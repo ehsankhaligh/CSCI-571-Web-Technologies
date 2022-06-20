@@ -1,0 +1,60 @@
+#marketStatus {
+  text-align: center !important;
+  display: Block !important;
+}
+
+@media only screen and (min-width: 1000px) {
+  /* For large screens: */
+  #topInfo {margin-right: 15%; margin-left: 15%}
+  #mystockpricesection {font-size:15px;}
+  #msgoutput {font-size:15px;}
+}
+
+@media only screen and (max-width: 600px) {
+  #topInfo {margin-right: 5%; margin-left: 5%}
+  #mysummary {font-size:11px;}
+  #mystockpricesection {font-size:11px;}
+  #msgoutput {font-size:11px;}
+}
+
+#centerIMG {
+  text-align-last: center;
+}
+
+#aboutTheCom{
+  margin-left:10%;
+}
+
+#comName{
+  color: gray;
+}
+
+#backgroundimage {
+  background: url("../background-graph.jpg");
+  margin-top:auto;
+  margin-left:auto;
+  width: 100%;
+  height: 100%;
+  background-repeat: repeat-y;
+  display: block;
+  position: absolute;
+  background-position:center;
+  background-size:cover;
+}
+
+#page-container {
+  position: relative;
+  min-height: 100vh;
+}
+
+#content-wrap {
+  padding-bottom: 2.5rem;    /* Footer height */
+}
+
+#footer {
+  position: absolute;
+  bottom: 0;
+  text-align: center;
+  width: 100%;
+  height: 2.5rem;            /* Footer height */
+}

@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+   <head>
+      <title>Bootstrap Example</title>
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1">
+      <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+      <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+   </head>
+   <body>
+      <div id="page-container">
+         <div id="content-wrap">
+            <div id="backgroundimage"></div>
+            <div class="card" id="topInfo">
+               <div class="card-header">
+                  <span style="font-size: 20px;"><Strong>My Watch List</Strong></span>
+               </div>
+               <ng-template [ngIf]="warndisplayflag == false">
+                  <div ngif="flagwarnBox == 12" class="alert alert-warning" role="alert" >
+                     Currently you don't have any stock in you watchlist.
+                  </div>
+               </ng-template>
+               <div class="card-body" *ngFor="let item of json_display">
+                  <h2 class="card-text" style="color: blue;">
+                     <u (click)="onclickArea(item.ticker)">{{item.ticker}} </u>
+                     <span style="color:{{item.color}}; display:inline; float:right">{{ item.c }}
+                     <button type="button" id="mybtn" class="btn btn-link"><span class="bi bi-x" (click)="deleteItem(item.ticker)"></span>
+                     </button>
+                     </span>
+                  </h2>
+                  <h3 class="card-title">
+                     {{item.name}}
+                     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.7.2/font/bootstrap-icons.css">
+                     <span style="color:{{item.color}}; display:inline; float:right"> <span [ngClass]="{'bi bi-caret-down-fill red-color' : arrowflag == 0, 'bi bi-caret-up-fill green-color' : arrowflag == 1, 'bi bi-caret-right-fill black-color' : arrowflag == 2}"></span> {{ item.d }} ( {{ item.dp }} %)</span>
+                  </h3>
+                  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.7.2/font/bootstrap-icons.css">
+               </div>
+            </div>
+         </div>
+         <footer id="footer" style="background-color:rgb(115, 147, 179);">Powered by <a href=" https://finnhub.io" target="_blank">Finnhub.io</a></footer>
+      </div>
+   </body>
+</html>
