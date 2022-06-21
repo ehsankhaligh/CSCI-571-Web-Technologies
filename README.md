@@ -1,1 +1,1 @@
-# USC-MS-Projects
+# CSCI 571
