@@ -1,1 +1,1 @@
-# CSCI 571
+# CSCI 571 Web Technologies
