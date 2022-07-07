@@ -1,0 +1,8 @@
+<resources>
+    <string name="app_name">Stocks</string>
+    <string name="search_box_title">Search</string>
+    <string name="mystar">Search</string>
+    <string name="menu_search">Menu Search</string>
+    <string name="course_name">course_name</string>
+    <string name="course_rating">course_rating</string>
+</resources>

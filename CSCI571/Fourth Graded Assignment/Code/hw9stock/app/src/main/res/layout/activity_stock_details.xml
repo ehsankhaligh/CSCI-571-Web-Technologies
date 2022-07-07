@@ -1,0 +1,133 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    tools:context=".stockDetailsPage"
+    android:orientation="vertical">
+
+
+    <ProgressBar
+        android:id="@+id/detailsidLoadingPB"
+        style="?android:attr/progressBarStyleLarge"
+        android:layout_width="130dp"
+        android:layout_height="379dp"
+        android:layout_centerHorizontal="true"
+        android:layout_gravity="center_vertical"
+        android:layout_marginLeft="125dp"
+        android:layout_marginTop="170dp"
+        android:layout_marginBottom="170dp"
+        android:background="@color/white"
+        android:indeterminate="true"
+        android:indeterminateTint="@color/purple_200"
+        android:indeterminateTintMode="src_atop"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/mydetail_toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:background="@color/white"
+        android:elevation="0dp"
+        app:titleTextAppearance="@style/Toolbar.TitleText"/>
+
+    <ImageView
+        android:id="@+id/star"
+        android:layout_width="40dp"
+        android:layout_height="20dp"
+        android:layout_margin="5dp"
+        android:background="@color/white"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.649"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.676" />
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_behavior="@string/appbar_scrolling_view_behavior"
+        android:id="@+id/detail_content">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <include
+                android:id="@+id/top_sum"
+                layout="@layout/stock_top_sum_info" />
+
+            <androidx.viewpager.widget.ViewPager
+                xmlns:android="http://schemas.android.com/apk/res/android"
+                android:id="@+id/viewPager"
+                android:layout_width="match_parent"
+                android:layout_height="470dp"
+                />
+
+            <com.google.android.material.tabs.TabLayout
+                android:id="@+id/tabLayout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:tabMode="fixed"
+                app:tabGravity="fill"/>
+
+            <include
+                android:id="@+id/portfolio"
+                layout="@layout/stock_portfolio_info" />
+
+            <include
+                android:id="@+id/stats"
+                layout="@layout/stock_stats_info" />
+
+            <include
+                android:id="@+id/about"
+                layout="@layout/stock_about_info" />
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/myidRVCourse"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent" />
+
+            <TextView
+                android:id="@+id/mytext"
+                android:layout_height="10dp"
+                android:layout_width="match_parent"
+                />
+
+            <include
+                android:id="@+id/insight"
+                layout="@layout/stock_insight_info" />
+
+            <include
+                android:id="@+id/insight_rec_chart"
+                layout="@layout/stock_rec_details_chart" />
+
+            <include
+                android:id="@+id/insight_esp_chart"
+                layout="@layout/stock_esp_details_chart" />
+
+            <include
+                android:id="@+id/news"
+                layout="@layout/stock_news_title" />
+
+            <include
+                android:id="@+id/top_news"
+                layout="@layout/stock_top_news_info" />
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/idRVCourse"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent" />
+
+        </LinearLayout>
+
+
+    </androidx.core.widget.NestedScrollView>
+
+
+</LinearLayout>

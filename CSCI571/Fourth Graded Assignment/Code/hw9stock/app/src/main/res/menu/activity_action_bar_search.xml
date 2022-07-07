@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:android="http://schemas.android.com/apk/res/android" >
+    <item
+        android:id="@+id/search_result"
+        android:title="@string/search_box_title"
+        app:showAsAction="always" />
+</menu>
+
+<!-- https://stackoverflow.com/questions/23230939/items-not-showing-in-the-actionbar-with-showasaction-always -->

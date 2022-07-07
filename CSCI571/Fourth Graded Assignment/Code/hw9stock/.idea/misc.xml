@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="DesignSurface">
+    <option name="filePathToZoomLevelMap">
+      <map>
+        <entry key="../../../../../layout/custom_preview.xml" value="0.159375" />
+        <entry key="../../HW9/hw9stock/app/src/main/res/drawable-v24/ic_launcher_foreground.xml" value="0.126" />
+        <entry key="../../HW9/hw9stock/app/src/main/res/drawable-v24/ic_search_black_24dp.xml" value="0.2005" />
+        <entry key="../../HW9/hw9stock/app/src/main/res/layout/activity_main.xml" value="0.29791666666666666" />
+        <entry key="../../HW9/hw9stock/app/src/main/res/layout/favorites_section.xml" value="0.1" />
+        <entry key="../../HW9/hw9stock/app/src/main/res/layout/finhub_section_header.xml" value="0.1" />
+        <entry key="../../HW9/hw9stock/app/src/main/res/layout/finhub_section_item.xml" value="0.29791666666666666" />
+        <entry key="../../HW9/hw9stock/app/src/main/res/layout/itemplaceholder.xml" value="0.29791666666666666" />
+        <entry key="../../HW9/hw9stock/app/src/main/res/layout/portfilio_section_main_page.xml" value="0.1" />
+        <entry key="../../HW9/hw9stock/app/src/main/res/layout/portfolio_detail_main_page_section.xml" value="0.24682971014492755" />
+        <entry key="../../HW9/hw9stock/app/src/main/res/layout/portfolio_details_main_page_header.xml" value="0.115625" />
+        <entry key="../../HW9/hw9stock/app/src/main/res/layout/portfolio_favorites_section.xml" value="0.24682971014492755" />
+        <entry key="../../HW9/hw9stock/app/src/main/res/layout/portfolio_favorites_section_header.xml" value="0.24682971014492755" />
+        <entry key="../../HW9/hw9stock/app/src/main/res/layout/portfolio_favotites_section_header.xml" value="0.1" />
+        <entry key="../../HW9/hw9stock/app/src/main/res/layout/portfolio_section_main_page.xml" value="0.11666666666666667" />
+        <entry key="../../HW9/hw9stock/app/src/main/res/layout/section_header.xml" value="0.1" />
+        <entry key="../../HW9/hw9stock/app/src/main/res/layout/top_date_section.xml" value="0.25" />
+        <entry key="../../HW9/hw9stock/app/src/main/res/menu/menu_main.xml" value="0.24635416666666668" />
+        <entry key="../../HW9/hw9stock/app/src/main/res/menu/menu_result.xml" value="0.24635416666666668" />
+        <entry key="app/src/main/res/drawable-v24/ic_launcher_foreground.xml" value="0.1845" />
+        <entry key="app/src/main/res/drawable/bg_layout.xml" value="0.2539154052734375" />
+        <entry key="app/src/main/res/drawable/bg_layout_green.xml" value="0.1" />
+        <entry key="app/src/main/res/drawable/bg_layout_rect_black.xml" value="0.174" />
+        <entry key="app/src/main/res/drawable/bg_layout_sqr.xml" value="0.231" />
+        <entry key="app/src/main/res/drawable/bottom_line.xml" value="0.231" />
+        <entry key="app/src/main/res/drawable/chart_line.xml" value="0.1275" />
+        <entry key="app/src/main/res/drawable/chevron_right.xml" value="0.174" />
+        <entry key="app/src/main/res/drawable/chrome_icon.xml" value="0.1985" />
+        <entry key="app/src/main/res/drawable/clock.xml" value="0.1275" />
+        <entry key="app/src/main/res/drawable/ic_app_playstore.xml" value="0.1845" />
+        <entry key="app/src/main/res/drawable/ic_delete.xml" value="0.174" />
+        <entry key="app/src/main/res/drawable/ic_icons8_chrome_144.xml" value="0.1985" />
+        <entry key="app/src/main/res/drawable/ic_launcher_background.xml" value="0.1845" />
+        <entry key="app/src/main/res/drawable/ic_launcher_playstore.xml" value="0.1845" />
+        <entry key="app/src/main/res/drawable/ic_no_image_available.xml" value="0.143" />
+        <entry key="app/src/main/res/drawable/ic_star_empty.xml" value="0.101" />
+        <entry key="app/src/main/res/drawable/ic_star_filled.xml" value="0.101" />
+        <entry key="app/src/main/res/drawable/ic_trending_down.xml" value="0.1" />
+        <entry key="app/src/main/res/drawable/ic_trending_up.xml" value="0.1" />
+        <entry key="app/src/main/res/drawable/launcher.xml" value="0.208" />
+        <entry key="app/src/main/res/drawable/rounded_corners_without_border.xml" value="0.335" />
+        <entry key="app/src/main/res/drawable/startupsplashlauncher.xml" value="0.1845" />
+        <entry key="app/src/main/res/drawable/twitter_icon.xml" value="0.1985" />
+        <entry key="app/src/main/res/layout/activity_detail.xml" value="0.23143115942028986" />
+        <entry key="app/src/main/res/layout/activity_main.xml" value="0.1" />
+        <entry key="app/src/main/res/layout/activity_stock_details.xml" value="0.1" />
+        <entry key="app/src/main/res/layout/bg_layout.xml" value="0.34010416666666665" />
+        <entry key="app/src/main/res/layout/card_layout.xml" value="0.24635416666666668" />
+        <entry key="app/src/main/res/layout/cardview_row.xml" value="0.24635416666666668" />
+        <entry key="app/src/main/res/layout/cardview_row_favorite.xml" value="0.335" />
+        <entry key="app/src/main/res/layout/cardview_row_portfolio.xml" value="0.25" />
+        <entry key="app/src/main/res/layout/detail_charts_area.xml" value="0.20729166666666668" />
+        <entry key="app/src/main/res/layout/dialog_fragment.xml" value="0.24635416666666668" />
+        <entry key="app/src/main/res/layout/favorites_section_header.xml" value="0.20208333333333334" />
+        <entry key="app/src/main/res/layout/favorites_section_item.xml" value="0.20208333333333334" />
+        <entry key="app/src/main/res/layout/finhub_section_item.xml" value="0.17604166666666668" />
+        <entry key="app/src/main/res/layout/fragment_first.xml" value="0.11770833333333333" />
+        <entry key="app/src/main/res/layout/fragment_second.xml" value="0.25104166666666666" />
+        <entry key="app/src/main/res/layout/news_dialog_view.xml" value="0.1" />
+        <entry key="app/src/main/res/layout/portfolio_favorites_section_header.xml" value="0.1" />
+        <entry key="app/src/main/res/layout/portfolio_section_header.xml" value="0.25" />
+        <entry key="app/src/main/res/layout/portfolio_section_item.xml" value="0.20208333333333334" />
+        <entry key="app/src/main/res/layout/remaining_news_items.xml" value="0.335" />
+        <entry key="app/src/main/res/layout/section_header.xml" value="0.15070921985815602" />
+        <entry key="app/src/main/res/layout/stock_about_info.xml" value="0.22" />
+        <entry key="app/src/main/res/layout/stock_comp_peers.xml" value="0.335" />
+        <entry key="app/src/main/res/layout/stock_esp_details_chart.xml" value="0.25052083333333336" />
+        <entry key="app/src/main/res/layout/stock_historical_details_chart.xml" value="0.1897644927536232" />
+        <entry key="app/src/main/res/layout/stock_insight_info.xml" value="0.24635416666666668" />
+        <entry key="app/src/main/res/layout/stock_news_title.xml" value="0.24635416666666668" />
+        <entry key="app/src/main/res/layout/stock_portfolio_info.xml" value="0.335" />
+        <entry key="app/src/main/res/layout/stock_rec_details_chart.xml" value="0.25052083333333336" />
+        <entry key="app/src/main/res/layout/stock_recchart_insight_info.xml" value="0.6553133514986376" />
+        <entry key="app/src/main/res/layout/stock_stats_info.xml" value="0.34010416666666665" />
+        <entry key="app/src/main/res/layout/stock_top_news_info.xml" value="0.335" />
+        <entry key="app/src/main/res/layout/stock_top_sum_info.xml" value="0.20153985507246377" />
+        <entry key="app/src/main/res/layout/stop_top_sum_info.xml" value="0.20153985507246377" />
+        <entry key="app/src/main/res/layout/success_buy_msg.xml" value="0.11980749746707194" />
+        <entry key="app/src/main/res/layout/success_trade_msg.xml" value="0.11980749746707194" />
+        <entry key="app/src/main/res/layout/trade_dialog.xml" value="0.24635416666666668" />
+        <entry key="app/src/main/res/menu/action_bar_search_example_menu.xml" value="0.24791666666666667" />
+        <entry key="app/src/main/res/menu/activity_action_bar_search.xml" value="0.24791666666666667" />
+        <entry key="app/src/main/res/menu/menu_main.xml" value="0.23055555555555557" />
+        <entry key="app/src/main/res/menu/menu_main_details.xml" value="0.34010416666666665" />
+        <entry key="app/src/main/res/menu/menu_result.xml" value="0.17604166666666668" />
+        <entry key="app/src/main/res/menu/menu_result_deatils.xml" value="0.1" />
+        <entry key="app/src/main/res/mipmap-anydpi-v26/ic_app.xml" value="0.1845" />
+        <entry key="app/src/main/res/mipmap-anydpi-v26/ic_app_playstore_round.xml" value="0.175" />
+        <entry key="app/src/main/res/mipmap-anydpi-v26/ic_app_playstore_round_sqr.xml" value="0.175" />
+        <entry key="app/src/main/res/mipmap-anydpi-v26/ic_launcher.xml" value="0.1845" />
+        <entry key="app/src/main/res/mipmap-anydpi-v26/ic_launcher_round.xml" value="0.1845" />
+        <entry key="app/src/main/res/xml/network_security_config.xml" value="0.23143115942028986" />
+      </map>
+    </option>
+  </component>
+  <component name="ProjectRootManager" version="2" languageLevel="JDK_11" default="true" project-jdk-name="11" project-jdk-type="JavaSDK">
+    <output url="file://$PROJECT_DIR$/build/classes" />
+  </component>
+  <component name="ProjectType">
+    <option name="id" value="Android" />
+  </component>
+</project>

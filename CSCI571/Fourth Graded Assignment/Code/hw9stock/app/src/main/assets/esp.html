@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <script src="https://code.highcharts.com/highcharts.js"></script>
+    <script src="https://code.highcharts.com/modules/exporting.js"></script>
+    <script src="https://code.highcharts.com/modules/export-data.js"></script>
+    <script src="https://code.highcharts.com/modules/accessibility.js"></script>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body>
+<div id="container" style="height: auto; width: auto"></div>
+</body>
+
+<script>
+
+
+function getespChart(apiEndPointURL) {
+    console.log(apiEndPointURL);
+
+    Highcharts.getJSON(apiEndPointURL, function(data) {
+
+		console.log(data);
+
+        let categories_list = [];
+      	let actual_list = [];
+      	let estimate_list = [];
+      	let count = data.length;
+
+        for (let i = 0; i < count; i += 1) {
+        		console.log(data[i]);
+            let surprise = data[i]["surprise"];
+            let period = data[i]["period"];
+            categories_list.push(period + " Surprise:" + surprise);
+            actual_list.push(data[i]["actual"]);
+            estimate_list.push(data[i]["estimate"]);
+        }
+
+				console.log(categories_list);
+        console.log(actual_list);
+        console.log(estimate_list);
+        // create the chart
+        Highcharts.chart('container', {
+
+				chart: {
+        type: 'spline'
+        },
+        title: {
+            align: 'center',
+            text: 'Historical ESP Surprises'
+        },
+        subtitle: {
+            text: ''
+        },
+        xAxis: {
+            categories: categories_list
+        },
+        yAxis: {
+            title: {
+                text: 'Quarterly ESP'
+            },
+            labels: {
+                formatter: function () {
+                    return this.value + '';
+                }
+            }
+        },
+        tooltip: {
+            crosshairs: true,
+            shared: true
+        },
+        plotOptions: {
+            spline: {
+                marker: {
+                    radius: 4,
+                    lineColor: '#666666',
+                    lineWidth: 1
+                }
+            }
+        },
+        series: [{
+            name: 'Actual',
+            marker: {
+                symbol: 'square'
+            },
+            data: actual_list
+
+        }, {
+            name: 'Estimate',
+            marker: {
+                symbol: 'diamond'
+            },
+            data: estimate_list
+        }]
+
+
+    	});
+
+ 	});
+
+}
+
+//getespChart("https://ehsankhalighstock.uw.r.appspot.com/api/v0/CompanyEarning/FB");
+</script>
+</html>

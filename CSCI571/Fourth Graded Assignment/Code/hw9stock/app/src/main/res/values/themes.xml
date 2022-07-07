@@ -1,0 +1,65 @@
+<resources xmlns:tools="http://schemas.android.com/tools">
+
+    <!-- Base application theme. -->
+    <style name="Theme.Hw9Stock" parent="Theme.MaterialComponents.DayNight.DarkActionBar">
+        <!-- Primary brand color. -->
+        <item name="colorPrimary">@color/black</item>
+        <item name="colorPrimaryVariant">@color/black</item>
+        <item name="colorPrimaryDark">@color/black</item>
+        <item name="colorOnPrimary">@color/black</item>
+        <!-- Secondary brand color. -->
+        <item name="colorSecondary">@color/black</item>
+        <item name="colorSecondaryVariant">@color/black</item>
+        <item name="colorOnSecondary">@color/black</item>
+        <!-- Status bar color. Did not work-->
+        <item name="android:statusBarColor" tools:targetApi="l">?attr/colorPrimaryVariant</item>
+        <!-- Customize your theme here. -->
+    </style>
+    <!-- This configures the styles for the title within the Toolbar  -->
+    <style name="Toolbar.TitleText" parent="TextAppearance.Widget.AppCompat.Toolbar.Title">
+        <item name="android:textSize">21sp</item>
+        <item name="android:textStyle">italic</item>
+    </style>
+
+    <style name="AppTheme" parent="Theme.AppCompat.Light.NoActionBar">
+        <item name="colorPrimaryDark">@color/gray</item>
+        <!-- Your application theme -->
+    </style>
+
+    <style name="BlueActivityTheme" parent="AppTheme">
+        <item name="colorPrimaryDark">@color/black</item>
+    </style>
+
+    <style name="RedAccent" parent="ThemeOverlay.AppCompat.Light">
+        <item name="colorAccent">#8A2BE2</item>
+    </style>
+
+    <!--style name="AppTheme.AppBarOverlay" parent="ThemeOverlay.AppCompat.Dark.ActionBar" />
+    <style name="AppTheme.PopupOverlay" parent="ThemeOverlay.AppCompat.Light" /-->
+
+    <!--style name="SplashScreenTheme" parent="Theme.MaterialComponents.DayNight.NoActionBar">
+        <item name="android:windowBackground">@drawable/ic_app_playstore</item>
+    </style-->
+
+    <style name="SplashScreenTheme" parent="Theme.MaterialComponents.DayNight.NoActionBar">
+        <item name="android:windowBackground">@drawable/startupsplashlauncher</item>
+    </style>
+
+</resources>
+
+    <!--Source + revisit:
+        Toolbar:
+        https://guides.codepath.com/android/using-the-app-toolbar
+        https://www.youtube.com/watch?v=DMkzIOLppf4
+        splash:
+        https://itnext.io/a-comprehensive-guide-to-android-12s-splash-screen-api-644609c811fa
+        https://social.msdn.microsoft.com/Forums/en-US/de1fe1e9-ddf1-4c80-ab16-1536b8316ab5/followed-splash-screen-guide-but-image-is-stretched-not-centered?forum=xamarinandroid
+        https://stackoverflow.com/questions/13024272/android-background-image-size-in-pixel-which-support-all-devices#:~:text=mdpi%20(medium)%20~160dpi,%2Dextra%2Dhigh)%20~480dpi
+        https://stackoverflow.com/questions/16500884/splash-screen-is-resizing-incorrectly
+        https://medium.com/geekculture/android-splash-screen-using-styles-themes-xml-6997f2f8c09e
+        https://stackoverflow.com/questions/36478925/why-is-apptheme-noactionbar-not-working
+        https://developer.android.com/studio/write/image-asset-studio **
+        https://www.tutorialspoint.com/how-can-i-set-an-icon-for-my-android-application#:~:text=Step%201%20%E2%88%92%20Create%20a%20new,the%20image%20in%20mipmap%20folder.
+        https://medium.com/android-news/the-complete-android-splash-screen-guide-c7db82bce565
+        https://medium.com/android-news/the-complete-android-splash-screen-guide-c7db82bce565 **
+    -->

@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <script src="https://code.highcharts.com/highcharts.js"></script>
+    <script src="https://code.highcharts.com/modules/exporting.js"></script>
+    <script src="https://code.highcharts.com/modules/export-data.js"></script>
+    <script src="https://code.highcharts.com/modules/accessibility.js"></script>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body>
+<div id="container" style="height: auto; width: auto"></div>
+</body>
+
+<script>
+
+
+function getrecTrendChart(apiEndPointURL) {
+    console.log(apiEndPointURL);
+
+    Highcharts.getJSON(apiEndPointURL, function(data) {
+
+				console.log(data);
+
+        if(data.length != 0){
+
+          let x_axis_list = [];
+          let stongBuy_list = [];
+          let buy_list = [];
+          let hold_list = [];
+          let strongSell_list = [];
+          let sell_list = [];
+          let count_loop = 4;
+
+
+          for(let i=0; i < count_loop; i += 1){
+            buy_list.push(data[i]['buy']);
+            hold_list.push(data[i]['hold']);
+            sell_list.push(data[i]['sell']);
+            x_axis_list.push(data[i]['period']);
+            stongBuy_list.push(data[i]['strongBuy']);
+            strongSell_list.push(data[i]['strongSell']);
+          }
+
+
+
+				console.log(x_axis_list);
+        console.log(stongBuy_list);
+        console.log(buy_list);
+        console.log(hold_list);
+        console.log(strongSell_list);
+        console.log(sell_list);
+        console.log(count_loop);
+
+
+
+        Highcharts.chart('container', {
+
+						chart: {
+            type: 'column'
+             },
+             title: {
+                 text: 'Recommendation Trends'
+             },
+             xAxis: {
+                 categories: x_axis_list
+             },
+             yAxis: {
+                 min: 0,
+                 title: {
+                     text: ''
+                 },
+                 stackLabels: {
+                     enabled: true,
+                     style: {
+                         fontWeight: 'bold',
+                         color: ( // theme
+                             Highcharts.defaultOptions.title.style &&
+                             Highcharts.defaultOptions.title.style.color
+                         ) || 'gray'
+                     }
+                 }
+             },
+             legend: {
+                 align: 'center',
+                 x: -30,
+                 verticalAlign: 'bottom',
+                 y: 25,
+                 floating: true,
+                 backgroundColor:
+                     Highcharts.defaultOptions.legend.backgroundColor || 'white',
+                 borderColor: '#CCC',
+                 borderWidth: 1,
+                 shadow: false
+             },
+             tooltip: {
+                 headerFormat: '<b>{point.x}</b><br/>',
+                 pointFormat: '{series.name}: {point.y}<br/>Total: {point.stackTotal}'
+             },
+             plotOptions: {
+                 column: {
+                     stacking: 'normal',
+                     dataLabels: {
+                         enabled: true
+                     }
+                 }
+             },
+             series: [{
+                 name: 'Strong Buy',
+                 data: stongBuy_list,
+                 color: "#006600"
+             }, {
+                 name: 'Buy',
+                 data: buy_list,
+                 color: "#00CC00"
+             }, {
+                 name: 'Hold',
+                 data: hold_list,
+                 color: "#F59E1D"
+             },{
+                 name: 'Sell',
+                 data: sell_list,
+                 color: "#FF6666"
+             },{
+                 name: 'Strong Sell',
+                 data: strongSell_list,
+                 color: "#660000"
+             }]
+
+
+       	});
+
+
+        }
+
+
+ 	 });
+
+}
+
+getrecTrendChart("https://ehsankhalighstock.uw.r.appspot.com/api/v0/CompanyRecommendationTrends/tsla");
+</script>
+</html>

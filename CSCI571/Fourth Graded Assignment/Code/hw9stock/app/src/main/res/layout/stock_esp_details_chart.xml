@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="460dp"
+    android:orientation="vertical"
+    android:paddingHorizontal="25dp">
+
+    <WebView
+        android:id="@+id/esp_chart"
+        android:layout_width="match_parent"
+        android:layout_height="460dp"></WebView>
+
+</LinearLayout>
+<!-- https://www.tutorialspoint.com/android/android_webview_layout.htm -->

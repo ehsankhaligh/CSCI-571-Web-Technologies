@@ -1,0 +1,81 @@
+<androidx.cardview.widget.CardView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    style="@style/CardView.Light"
+    android:layout_width="match_parent"
+    android:layout_height="360dp"
+    android:layout_marginTop="8dp"
+    android:layout_marginStart="8dp"
+    android:layout_marginEnd="8dp">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@drawable/bg_layout">
+
+        <ImageView
+            android:id="@+id/media_image"
+            android:layout_width="323dp"
+            android:layout_height="205dp"
+            android:layout_marginTop="2dp"
+            android:layout_marginEnd="16dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.169" />
+
+        <TextView
+            android:id="@+id/supporting_text"
+            android:layout_width="145dp"
+            android:layout_height="29dp"
+            android:layout_marginBottom="96dp"
+            android:ellipsize="end"
+            android:lineSpacingExtra="8dp"
+            android:maxLines="3"
+            android:scrollHorizontally="true"
+            android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+            android:textColor="#DE000000"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.064"
+            app:layout_constraintStart_toStartOf="parent" />
+
+        <TextView
+            android:id="@+id/hours_ago"
+            android:layout_width="195dp"
+            android:layout_height="29dp"
+            android:layout_marginBottom="96dp"
+            android:ellipsize="end"
+            android:lineSpacingExtra="8dp"
+            android:maxLines="3"
+            android:scrollHorizontally="true"
+            android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+            android:textColor="@color/gray"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.55"
+            app:layout_constraintStart_toStartOf="parent" />
+
+        <TextView
+            android:id="@+id/supporting_text1"
+            android:layout_width="330dp"
+            android:layout_height="70dp"
+            android:layout_marginBottom="4dp"
+            android:ellipsize="end"
+            android:textSize="13sp"
+            android:textStyle="bold"
+            android:textColor="@color/black"
+            android:lineSpacingExtra="8dp"
+            android:maxLines="3"
+            android:scrollHorizontally="true"
+            android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.861"
+            app:layout_constraintStart_toStartOf="parent" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</androidx.cardview.widget.CardView>
+<!-- https://medium.com/@eugenebrusov/using-of-constraintlayout-to-build-out-cardview-with-material-design-e111e64575c2-->

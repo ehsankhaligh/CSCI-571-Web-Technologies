@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <script src="https://code.highcharts.com/highcharts.js"></script>
+    <script src="https://code.highcharts.com/modules/exporting.js"></script>
+    <script src="https://code.highcharts.com/modules/export-data.js"></script>
+    <script src="https://code.highcharts.com/modules/accessibility.js"></script>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body>
+<div id="container" style="height: 600; width: auto"></div>
+</body>
+
+<script>
+
+
+function getrecTrendChart(ticker, apiEndPointURL) {
+    console.log(apiEndPointURL);
+
+    Highcharts.getJSON(apiEndPointURL, function(data) {
+
+
+		console.log(data);
+		let listLen = data['c'].length;
+    let stock_price_list = [];
+    let stock_price_list_last_6 = [];
+
+    for (let i = 0; i < listLen; i += 1) {
+
+       try{
+         const unixTime = data['t'][i]*1000;
+         const date = new Date(unixTime*1000);
+
+         const hour = date.toLocaleTimeString(navigator.language, {hour: '2-digit'});
+         stock_price_list.push([unixTime, data['c'][i]]);
+
+         }catch(erro){
+
+             console.log("");//debug later
+
+           }
+       }
+
+
+       stock_price_list_last_6 = stock_price_list.slice(Math.max(stock_price_list.length - 6, 1));
+       console.log(stock_price_list_last_6);
+       console.log(ticker);
+
+       Highcharts.chart('container', {
+
+              series: [{
+                data: stock_price_list_last_6,
+                showInNavigator: true,
+                color: "#2f7ed8",
+                type: 'line',
+                tooltip: {
+                  valueDecimals: 2,
+                },
+              },],
+              title: { text: ticker + " Hourly Price Variation"},
+              rangeSelector: {
+                enabled: false,
+              },
+              xAxis: {
+                  type: 'datetime',
+                  labels: {
+                      format: '{value:%H}'
+                  }
+              },
+              navigator: {
+                series: {
+                  fillOpacity: 0,
+                  type: 'area',
+                  color: '#a6c96a'
+                  },
+              }
+     });
+
+ });
+
+
+}
+
+ //getrecTrendChart("tsla", "https://ehsankhalighstock.uw.r.appspot.com/api/v0/CompanyHistoricalDataSummary/tsla");
+</script>
+</html>

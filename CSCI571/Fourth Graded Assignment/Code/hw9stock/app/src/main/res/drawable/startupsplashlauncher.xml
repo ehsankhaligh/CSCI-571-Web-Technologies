@@ -1,0 +1,5 @@
+<layer-list xmlns:android="http://schemas.android.com/apk/res/android" android:opacity="opaque">
+    <item android:drawable="@color/white"/>
+    <item><bitmap android:src="@mipmap/ic_launcher_foreground" android:gravity="center"/></item>
+</layer-list>
+<!-- https://stackoverflow.com/questions/40400076/splash-screen-like-google  https://www.youtube.com/watch?v=10SkTlR_t2I https://medium.com/android-news/the-complete-android-splash-screen-guide-c7db82bce565 -->

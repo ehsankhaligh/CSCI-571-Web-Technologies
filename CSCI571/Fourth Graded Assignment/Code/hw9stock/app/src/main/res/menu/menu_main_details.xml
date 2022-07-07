@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:android="http://schemas.android.com/apk/res/android" >
+    <!-->Source: https://developer.android.com/training/appbar/action-views<-->
+    <item
+        android:id="@+id/star_empty"
+        android:icon="@drawable/ic_star_empty"
+        android:title="@string/mystar"
+        app:showAsAction="ifRoom|collapseActionView" />
+</menu>
+<!-- Example 7 & https://stackoverflow.com/questions/62574158/android-androidx-searchview-is-not-working -->
